@@ -272,14 +272,11 @@ gaps vertical 2
 # Polybar Script
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-# Alternative (set last used background)
-exec --no-startup-id source ~/.fehbg
-
 #for dual monitor
 exec_always --no-startup-id xrandr --output HDMI-0 --above eDP-1 --auto
 
 #for picom
-exec_always --no-startup-id picom --experimental-backends -b
+exec_always --no-startup-id picom -b
 
 #for notification/dunst
 exec_always --no-startup-id dunst
