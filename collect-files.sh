@@ -1,6 +1,6 @@
 #!/bin/bash
 
-configs=("i3" "flameshot" "dunst" "picom" "alacritty" "gtk-3.0" "nemo" "pavucontrol.ini" "polybar" "rofi")
+configs=("i3" "flameshot" "dunst" "picom" "alacritty" "gtk-3.0" "nemo" "pavucontrol.ini" "polybar" "rofi" "nvim")
 
 rm -rf .config
 mkdir .config
@@ -18,4 +18,3 @@ mkdir -p .local/share
 cp -r ~/.local/bin .local/bin
 cp -r ~/.local/share/icons .local/share/icons
 cp -r ~/.local/share/wallpapers .local/share/wallpapers
-cp -r ~/.local/share/sddm .local/share/sddm
