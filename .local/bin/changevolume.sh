@@ -9,7 +9,12 @@ case $1 in
 up)
 	# Set the volume on (if it was muted)
 	pamixer -u
-	pamixer -i 5 --allow-boost
+	volume=$(pamixer --get-volume)
+	if (($volume >= 145)); then
+		pamixer --set-volume 150 --allow-boost
+	else
+		pamixer -i 5 --allow-boost
+	fi
 	send_notification $1
 	;;
 down)
